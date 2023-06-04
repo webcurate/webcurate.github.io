@@ -1,0 +1,272 @@
+body {
+   margin: 0;
+   padding: 0;
+	color: #2e2e2e;
+	font-size: 18px;
+	font-family: 'Lora', serif;
+	line-height: 1.6;
+	border-top: 3px solid #325e3d;
+}
+
+a {
+	color: #325e3d;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #222;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   text-align: center;
+   line-height: 1.15;
+   color: #325e3d;
+}
+
+hr {
+	margin: 30px 0;
+	color: #325e3d;
+}
+
+img {
+	max-width: 100%; 
+}
+
+header {
+   background-color: #ace8bb;
+   padding: 40px;
+   text-align: center;
+}
+
+img.logo{
+	max-width: 300px;
+}
+
+.heading{
+	font-size: 28px;
+	font-weight: 700;
+	text-transform: capitalize; 
+	line-height: 1.1;
+	margin: 5px auto;
+}
+
+.description{
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 1.1;
+	margin: 0 auto;
+}
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  color: #fff;
+  background-color: #325e3d;
+}
+
+.nav-links a {
+  color: #fff;
+}
+
+/* LOGO */
+.logo {
+  font-size: 32px;
+}
+
+/* NAVBAR MENU */
+ul.nav-links {
+	margin: 3px auto;
+	list-style: none;
+}
+
+.menu {
+  display: flex;
+  font-size: 18px;
+  gap: 1em;
+}
+
+.menu li:hover {
+  background-color: #325e3d;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 5px 14px;
+}
+
+.services {
+  position: relative; 
+}
+
+.dropdown {
+  background-color: #325e3d;
+  padding: 5px 0;
+  position: absolute; /*WITH RESPECT TO PARENT*/
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+}
+
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: #4c9e9e;
+}
+
+/* RESPONSIVE NAVBAR MENU STARTS */
+
+/* CHECKBOX HACK */
+
+input[type=checkbox] {
+  display: none;
+} 
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+  padding: 0 40px;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+ .menu {
+    display:none;
+    position: absolute;
+    background-color:#222;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color:#ace8bb;
+    transition: 0.3s ease;
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+
+  input[type=checkbox]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+
+  .dropdown li:hover {
+    background-color: #ace8bb;
+  }
+}
+
+.container {
+	margin: 40px 20px;
+}
+
+ section {
+   padding: 40px;
+ }
+
+.flex {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.col {
+  margin-bottom: 20px; /* Adjust the gap between columns as needed */
+}
+
+
+.one {
+  flex-basis: 100%; /* Adjust the width of each column as needed */
+}
+
+.two {
+  flex-basis: calc(50% - 20px); /* Adjust the width of each column as needed */
+  margin-right: 20px; /* Adjust the gap between columns as needed */
+}
+
+.three {
+  flex-basis: calc(33% - 20px); /* Adjust the width of each column as needed */
+  margin-right: 20px; /* Adjust the gap between columns as needed */
+}
+
+.four {
+  flex-basis: calc(25% - 20px); /* Adjust the width of each column as needed */
+  margin-right: 20px; /* Adjust the gap between columns as needed */
+}
+
+footer {
+	padding: 20px 40px;
+	margin-top: 30px;
+	text-align: center;
+	background-color: #222;
+	color: #f9f9f9;
+}
+
+footer a,
+footer a:hover {
+	color: #f9f9f9;
+}
+
+.light {
+	background-color: #ace8bb;
+}
+
+.dark {
+	background-color: #325e3d;
+}
+
+.brickred {
+	background-color: rgb(207, 15, 15);
+}
+
+.skyblue {
+	background-color: blue;
+}
+
+.dark,
+.dark a,
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+	color: #fff;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 90%;
+	border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+
+	.one, .two, .three, .four {
+	  flex-basis: 100%; /* Adjust the width of each column as needed */
+	}
+
+ }
