@@ -3,7 +3,9 @@ body {
    padding: 0;
 	color: #2e2e2e;
 	font-size: 18px;
-	font-family: 'Lora', serif;
+	font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+    "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
 	line-height: 1.6;
 	border-top: 3px solid #325e3d;
 }
