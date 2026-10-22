@@ -24,6 +24,11 @@ body {
   line-height: 1.7;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.15;
+  color: var(--primary-color);
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -103,7 +108,7 @@ input[type=checkbox] {
 
 .hamburger {
   display: none;
-  font-size: 26px;
+  font-size: 28px;
   cursor: pointer;
   color: var(--primary-color);
   user-select: none;
@@ -124,6 +129,7 @@ input[type=checkbox] {
 .hero-content h1 {
   font-size: 2.75rem;
   margin-bottom: 1rem;
+  color: var(--white);
 }
 
 .hero-content p {
@@ -431,11 +437,19 @@ input[type=checkbox] {
 /* --- Mobile Navigation Responsiveness --- */
 @media (max-width: 768px) {
   .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
   }
 
   .hamburger {
     display: block;
+  }
+
+  .nav-main {
+  	width: 100%;
+  	display: block;
   }
 
   .nav-links {
@@ -447,10 +461,21 @@ input[type=checkbox] {
     border-top: 1px solid var(--border-color);
     padding: 1rem 0;
     gap: 1rem;
+    margin-top: 0.75rem;
+    box-shadow: 0 4px 6px rgba(6, 78, 59, 0.05);
   }
 
-  /* When checkbox is checked, reveal menu links */
-  input[type=checkbox]:checked ~ .nav-links {
+  /* When checkbox is checked, reveal menu links cleanly below the header bar */
+  input[type=checkbox]:checked ~ nav .nav-links {
     display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+  .nav-links {
+    display: flex !important;
   }
 }
