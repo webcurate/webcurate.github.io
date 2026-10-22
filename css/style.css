@@ -75,12 +75,14 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
+  position: relative;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .nav-links a {
@@ -92,6 +94,19 @@ img {
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--primary-color);
+}
+
+/* Checkbox and Hamburger for Mobile Menu Toggle */
+input[type=checkbox] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--primary-color);
+  user-select: none;
 }
 
 /* --- Hero Section --- */
@@ -354,43 +369,6 @@ img {
   text-decoration: underline;
 }
 
-/* --- Footer --- */
-.footer {
-  background-color: var(--primary-color);
-  color: var(--white);
-  padding: 2.5rem 0;
-}
-
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
-}
-
-.footer-links {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-}
-
-.footer-links a {
-  color: #a7f3d0;
-  transition: var(--transition);
-}
-
-.footer-links a:hover {
-  color: var(--white);
-}
-
-@media (min-width: 768px) {
-  .footer-container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
 /* --- Footer & Legal Styling --- */
 .footer {
   background-color: var(--primary-color);
@@ -438,8 +416,41 @@ img {
 }
 
 @media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
   .footer-links-wrapper {
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
+  }
+}
+
+/* --- Mobile Navigation Responsiveness --- */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    border-top: 1px solid var(--border-color);
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+
+  /* When checkbox is checked, reveal menu links */
+  input[type=checkbox]:checked ~ .nav-links {
+    display: flex;
   }
 }
